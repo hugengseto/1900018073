@@ -11,37 +11,37 @@
     text-align: center;
 }
     </style>
-    <title>pertemuan 5 Form </title>
+    <title></title>
 </head>
 <body style="background-color: #7FFFD4">
     <center>
     <h1 style="font-family: Brush Script MT">Form Data Diri</h1>
     </center>
-    <h3>Pertemuan 5(FORM)</h3><br><br>
+    <form method="post" action="form.php">
     <div></div>
     <label for="nama">Nama Lengkap</label>
     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</td>
-    <input type="text" id="nama" size="20"><br><br>
+    <input type="text" name="nama" size="20"><br><br>
     <label for="alamat">Alamat</label>
     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</td>
-    <input type="text" id="alamat" size="50"><br><br>
+    <input type="text" name="alamat" size="50"><br><br>
     <label for="telp">No.Handphone&nbsp;&nbsp;&nbsp;</label>
     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</td>
-    <input type="text" id="telp" size="13"><br><br> 
+    <input type="text" name="telp" size="13"><br><br> 
     <td>Jenis kelamin</td>
     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</td>
-    <td><input type="radio" id="lk" name="kelamin"><label for="lk">Laki-laki</label>
-        <input type="radio" id="pr" name="kelamin"><label for="pr">Perempuan</label>
+    <td><input type="radio" name="kelamin" value="laki-laki">laki-laki
+        <input type="radio" name="kelamin" value="perempuan">perempuan
     </td><br><br>
     <td>Agama</td>
     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</td>
-    <td><select nama=agama>
-        <option nama=agama>pilih</option>
-        <option nama=agama>Islam</option>
-        <option nama=agama>Kristen</option>
-        <option nama=agama>Hindu</option>
-        <option nama=agama>Budha</option>
-        <option nama=agama>Konghucu</option>
+    <td><select name="agama">
+        <option name="agama"></option>
+        <option value="islam">Islam</option>
+        <option value="kristen">Kristen</option>
+        <option value="hindu">Hindu</option>
+        <option value="buddha">Buddha</option>
+        <option value="konghucu">Konghucu</option>
     </select>
     </td>
     </td><br><br>
@@ -53,6 +53,6 @@
     <BUTTON type="submit">Submit</BUTTON>
     <button type="reset">Reset</button>
     </center>
-
+</form>
 </body>
 </html>
