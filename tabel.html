@@ -1,36 +1,53 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>pertemuan 5 tabel</title>
-<style>
-table, th, td{
-	border: 1px solid black;
-	border-collapse: collapse;
-}
-th, td {
-	padding:5;
-	text-align: center;
-}
-</style>
+	<title>Peserta</title>
+	<style type="text/css">
+		body{
+			background-image: url('https://www.rukita.co/stories/wp-content/uploads/2019/11/rak-buku-cover-1360x901.jpg');
+			background-size: cover;
+		}
+
+		.badan h1{
+			color: white;
+			font-family: verdana;
+
+		}
+
+		.badan .atas{
+			background: yellow;
+		}
+	</style>
 </head>
-<body style="background-color: #7FFFD4">
-	<center><h2 style="font-family: Brush Script MT">Pertemuan 2</h2>
-	<p>Pertemuan 5(TABEL)</p>
-
-	<table>
-		<tr>
-			<td colspan="3">image</th>
-		</tr>
-		<tr>
-			<td width="100px" height="50px" bgcolor="#D3D3D3"><a href="https://www.instagram.com/accounts/login/?hl=id">Instagram</a><br><a href="home.html">Home</a><br><a href="about.html">About</a></td>
-			<td width="300px" height="50px"><p>ini merupakan artikel yang akan ditampilkan pada halaman pertama. ini merupakan artikel yang akan ditampilkan pada halaman pertama. ini merupakan artikel yang akan ditampilkan pada halaman pertama</p></td>
-			<td width="100px" height="50px" bgcolor="#D3D3D3"></td>
-		</tr>
-		<tr>
-			<td colspan="3" >image</td>
-		</tr>
-	</table>
-
-</center>
+<body>
+	<div class="badan">
+		<h1 align="center">Daftar Sumbangan Buku</h1>
+		<table width="100%" style="border-collapse:collapse;" border="5" bgcolor="white">
+			<tr class="atas">
+				<th style="font-family: cursive; color: red;">Nama Lengkap</th>
+				<th style="font-family: cursive; color: red;">Alamat</th>
+				<th style="font-family: cursive; color: red;">No HP</th>
+				<th style="font-family: cursive; color: red;">Jenis Kelamin</th>
+				<th style="font-family: cursive; color: red;">Jumlah Sumbangan</th>
+			</tr>
+			<?php 
+				echo "<head><title>Daftar sumbangan buku bekas/layak baca </head></title>";
+				$fp = fopen("daftarsumbangan.txt", "r");
+			?>
+			<?php while ($isi = fgets($fp,100)) 
+			{
+				$pisah = explode ("|", $isi);
+				?>
+				<tr>
+					<th><?php echo"$pisah[0]"; ?></th>
+					<th><?php echo"$pisah[1]"; ?></th>
+					<th><?php echo"$pisah[2]"; ?></th>
+					<th><?php echo"$pisah[3]"; ?></th>
+					<th><?php echo"$pisah[4]"; ?></th>
+				</tr>
+			<?php } ?>
+		</table>
+		<button class="tombol"><a align="center" href="form.html">Kembali Ke Menu Awal</a>
+	</div>
 </body>
 </html>
