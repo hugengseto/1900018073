@@ -9,13 +9,17 @@
         th, td {
     padding:5;
     text-align: center;
-}
+        }
+        form{
+            font-size: 20px;
+        }
     </style>
     <title></title>
 </head>
-<body style="background-color: #7FFFD4">
+<body style="background-image: url(form.jpg); background-size: cover;">
     <center>
-    <h1 style="font-family: Brush Script MT">Form Data Diri</h1>
+    <h1 style="font-family: Brush Script MT; font-size: 50px;" >Form Pendaftaran</h1>
+    <h4>Sumbangan Buku Bekas (layak Baca)</h4>
     </center>
     <form method="post" action="form.php">
     <div></div>
@@ -33,23 +37,10 @@
     <td><input type="radio" name="kelamin" value="laki-laki">laki-laki
         <input type="radio" name="kelamin" value="perempuan">perempuan
     </td><br><br>
-    <td>Agama</td>
-    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</td>
-    <td><select name="agama">
-        <option name="agama"></option>
-        <option value="islam">Islam</option>
-        <option value="kristen">Kristen</option>
-        <option value="hindu">Hindu</option>
-        <option value="buddha">Buddha</option>
-        <option value="konghucu">Konghucu</option>
-    </select>
-    </td>
-    </td><br><br>
-    <td>Prestasi yang pernah diraih</td>
+    <label for="sumbangan">Jumlah Sumbangan Buku</label>
     <td>:</td>
-    <textarea type="text" name="prest">
-    </textarea><br><br>
-    <center>
+    <input type="text" name="sumbangan">
+    <center><br>
     <BUTTON type="submit">Submit</BUTTON>
     <button type="reset">Reset</button>
     </center>
